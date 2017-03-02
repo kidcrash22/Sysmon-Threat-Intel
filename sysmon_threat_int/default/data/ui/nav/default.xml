@@ -1,0 +1,10 @@
+<nav search_view="search" color="#f4f442">
+  <view name="search" default='true' />
+  <collection label="Account Activity">
+      <view name="accounts__account_activity_overview" />
+      <view name="accounts__account_activity_lookup" />
+      <view name="exchange__failed_logon_attempts" />
+      <saved name="Exchange - External Logon Attempts" />
+  </collection>
+  <view name="reports" />
+</nav>
