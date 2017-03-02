@@ -98,6 +98,19 @@
   </row>
   <row>
     <panel>
+      <title>Destination Locations</title>
+      <map>
+        <search>
+          <query>index=sysmon sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational" EventDescription="Network Connect" | iplocation dest_ip | geostats count by dest_ip</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="mapping.type">marker</option>
+      </map>
+    </panel>
+  </row>
+  <row>
+    <panel>
       <title>Top Applications</title>
       <table>
         <search>

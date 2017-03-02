@@ -24,4 +24,9 @@ modtime = 1488477673.538260400
 [views/network_overview]
 owner = ll001080
 version = 6.5.0
-modtime = 1488478700.165247700
+modtime = 1488481303.939172900
+
+[views/investigator]
+owner = ll001080
+version = 6.5.0
+modtime = 1488485020.695627500
