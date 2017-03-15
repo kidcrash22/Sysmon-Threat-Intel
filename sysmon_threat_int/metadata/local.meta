@@ -30,3 +30,48 @@ modtime = 1488481303.939172900
 owner = ll001080
 version = 6.5.0
 modtime = 1488485020.695627500
+
+[savedsearches/IOC%20-%20svchost.exe%20not%20run%20by%20services.exe]
+owner = ll001080
+version = 6.5.0
+modtime = 1488902065.138858200
+
+[savedsearches/IOC%20-%20Suspicious%20binary%20launch%20location]
+owner = ll001080
+version = 6.5.0
+modtime = 1488902827.717922000
+
+[savedsearches/IOC%20-%20Commands%20run%20from%20Office%20Doc%2FBrowser]
+owner = ll001080
+version = 6.5.0
+modtime = 1488912241.852578000
+
+[savedsearches/IOC%20-%20%3E5%20Critical%20Process%20in%2010m]
+owner = ll001080
+version = 6.5.0
+modtime = 1488915419.790043700
+
+[savedsearches/IOC%20-%20Abnormally%20long%20Powershell%20Command]
+owner = ll001080
+version = 6.5.0
+modtime = 1488912624.433704100
+
+[savedsearches/IOC%20-%20Powershell%20Suspicious%20Strings]
+owner = ll001080
+version = 6.5.0
+modtime = 1488915824.247361000
+
+[savedsearches/IOC%20-%20Suspicious%20execution%20of%20rundll%20-%20User%20Profile%2FBrowser]
+owner = ll001080
+version = 6.5.0
+modtime = 1488920178.613333600
+
+[views/suspicious_indicators]
+owner = ll001080
+version = 6.5.2
+modtime = 1489585297.829372500
+
+[views/file_creation_overview]
+owner = ll001080
+version = 6.5.2
+modtime = 1489585003.325805200
