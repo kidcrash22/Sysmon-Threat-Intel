@@ -1,10 +1,18 @@
-<nav search_view="search" color="#f4f442">
-  <view name="search" default='true' />
-  <collection label="Account Activity">
-      <view name="accounts__account_activity_overview" />
-      <view name="accounts__account_activity_lookup" />
-      <view name="exchange__failed_logon_attempts" />
-      <saved name="Exchange - External Logon Attempts" />
+<nav search_view="search" color="#ff9900">
+  <view name="sysmon_overview" default='true' />
+  <collection label="Network Activity">
+      <view name="network_overview" />
+  </collection>
+  <collection label="Process Activity">
+    <view name="process_overview" />
+    <view name="process_watch" />
+  </collection>
+  <collection label="File Activity">
+    <view name="file_creation_overview" />
+  </collection>
+  <collection label="Investigation">
+    <view name="investigator" />
+    <view name="suspicious_indicators" />
   </collection>
   <view name="reports" />
 </nav>
