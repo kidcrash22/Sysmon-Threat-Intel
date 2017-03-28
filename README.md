@@ -13,9 +13,11 @@ Requirements:
     Default - sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational"
 
 Current Dashboards:  
--Sysmon Overview - Shows basic overview and usage for sysmon events.  
--Investigator - Allows searching of events for specific hosts, users.  
--Network Overview  
--File Creation Overview  
--Process Overview  
--Suspicious Indicators - Collection of some known IOC  
+- Sysmon Overview - Shows basic overview and usage for sysmon events.  
+- Investigator - Allows searching of events for specific hosts, users.  
+- Network Overview  
+- Network Connections - Provides searchable list of network connections
+- File Creation Overview  
+- Registry Overview
+- Process Overview  
+- Suspicious Indicators - Collection of some known IOC  
