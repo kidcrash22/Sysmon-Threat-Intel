@@ -23,7 +23,7 @@
     <panel>
       <chart>
         <search>
-          <query>index=sysmon sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" Computer=$comp$ user=$usr$ | stats count by EventDescription</query>
+          <query>`sysmon` Computer=$comp$ user=$usr$ | stats count by EventDescription</query>
           <earliest>$timesel.earliest$</earliest>
           <latest>$timesel.latest$</latest>
         </search>
@@ -34,7 +34,7 @@
       <chart>
         <title>Network Destinations</title>
         <search>
-          <query>index=sysmon sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational"  EventDescription="Network Connect" Computer=$comp$ user=$usr$ | top dest_host | rename dest_host AS "Destination"</query>
+          <query>`sysmon`  EventDescription="Network Connect" Computer=$comp$ user=$usr$ | top dest_host | rename dest_host AS "Destination"</query>
           <earliest>$timesel.earliest$</earliest>
           <latest>$timesel.latest$</latest>
         </search>
@@ -45,7 +45,7 @@
       <chart>
         <title>Network Ports</title>
         <search>
-          <query>index=sysmon sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational"  EventDescription="Network Connect" Computer=$comp$ user=$usr$ | top dest_port | rename dest_port  AS "Destination Port"</query>
+          <query>`sysmon`  EventDescription="Network Connect" Computer=$comp$ user=$usr$ | top dest_port | rename dest_port  AS "Destination Port"</query>
           <earliest>$timesel.earliest$</earliest>
           <latest>$timesel.latest$</latest>
         </search>
@@ -58,7 +58,7 @@
       <table>
         <title>Critical Processes</title>
         <search>
-          <query>index=sysmon sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational" process="*\\powershell.exe" OR process="*\\msbuild.exe" OR process="*\\psexec.exe" OR process="*\\at.exe" OR process="*\\schtasks.exe" OR process="*\\net.exe" OR process="*\\vssadmin.exe" OR process="*\\utilman.exe" OR process="*\\wmic.exe" OR process="*\\mshta.exe" OR process="*\\wscript.exe" OR process="*\\cscript.exe" OR process="*\\cmd.exe" OR process="*\\whoami.exe" OR process="*\\mmc.exe" OR process="*\\systeminfo.exe" OR process="*\\csvde.exe" Computer=$comp$ user=$usr$ | stats count by process</query>
+          <query>`sysmon` process="*\\powershell.exe" OR process="*\\msbuild.exe" OR process="*\\psexec.exe" OR process="*\\at.exe" OR process="*\\schtasks.exe" OR process="*\\net.exe" OR process="*\\vssadmin.exe" OR process="*\\utilman.exe" OR process="*\\wmic.exe" OR process="*\\mshta.exe" OR process="*\\wscript.exe" OR process="*\\cscript.exe" OR process="*\\cmd.exe" OR process="*\\whoami.exe" OR process="*\\mmc.exe" OR process="*\\systeminfo.exe" OR process="*\\csvde.exe" Computer=$comp$ user=$usr$ | stats count by process</query>
           <earliest>$timesel.earliest$</earliest>
           <latest>$timesel.latest$</latest>
         </search>
@@ -68,7 +68,7 @@
       <table>
         <title>Parent/Child Processes</title>
         <search>
-          <query>index=sysmon sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode="1" Computer=$comp$ user=$usr$  | stats values(ParentImage) by process</query>
+          <query>`sysmon` EventCode="1" Computer=$comp$ user=$usr$  | stats values(ParentImage) by process</query>
           <earliest>$timesel.earliest$</earliest>
           <latest>$timesel.latest$</latest>
         </search>
@@ -80,7 +80,7 @@
       <table>
         <title>Network Applcations</title>
         <search>
-          <query>index=sysmon sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational"  EventDescription="Network Connect" Computer=$comp$ user=$usr$ | stats values(dest_host) by Image</query>
+          <query>`sysmon`  EventDescription="Network Connect" Computer=$comp$ user=$usr$ | stats values(dest_host) by Image</query>
           <earliest>$timesel.earliest$</earliest>
           <latest>$timesel.latest$</latest>
         </search>
@@ -90,7 +90,7 @@
       <table>
         <title>Hashes by Image</title>
         <search>
-          <query>index=sysmon sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode="1" Computer=$comp$ user=$usr$  | rex field=Hashes ".*MD5=(?&lt;MD5&gt;[A-F0-9]*),IMPHASH=(?&lt;IMPHASH&gt;[A-F0-9]*)" | stats dc(MD5) as numhashes, values(MD5) AS "MD5 Hash" by Image</query>
+          <query>`sysmon` EventCode="1" Computer=$comp$ user=$usr$  | rex field=Hashes ".*MD5=(?&lt;MD5&gt;[A-F0-9]*),IMPHASH=(?&lt;IMPHASH&gt;[A-F0-9]*)" | stats dc(MD5) as numhashes, values(MD5) AS "MD5 Hash" by Image</query>
           <earliest>$timesel.earliest$</earliest>
           <latest>$timesel.latest$</latest>
         </search>
