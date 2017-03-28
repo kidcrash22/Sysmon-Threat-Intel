@@ -75,3 +75,69 @@ modtime = 1489585297.829372500
 owner = ll001080
 version = 6.5.2
 modtime = 1489585003.325805200
+
+[views/registry_overview]
+owner = ll001080
+version = 6.5.2
+modtime = 1490711377.690025700
+
+[views/network_connections]
+owner = ll001080
+version = 6.5.2
+modtime = 1490711339.901834300
+
+[savedsearches/IOC%20-%20Certutil%20Decode%20in%20Appdata]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = ll001080
+version = 6.5.2
+modtime = 1490711621.636165800
+
+[savedsearches/IOC%20-%20Download%20from%20bitsadmin]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = ll001080
+version = 6.5.2
+modtime = 1490711627.727517800
+
+[savedsearches/IOC%20-%20MSHTA%20Spwaning%20Windows%20Shell]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = ll001080
+version = 6.5.2
+modtime = 1490711638.807159700
+
+[savedsearches/IOC%20-%20Process%20Created%20by%20MMC]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = ll001080
+version = 6.5.2
+modtime = 1490711645.633555100
+
+[savedsearches/IOC%20-%20Shellcode%20Injected%20from%20Office]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = ll001080
+version = 6.5.2
+modtime = 1490711651.559900700
+
+[savedsearches/IOC%20-%20Suspicious%20Powershell%20Exe%20from%20Scripting]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = ll001080
+version = 6.5.2
+modtime = 1490711657.628251800
+
+[savedsearches/IOC%20-%20Suspicious%20Script%20Execution]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = ll001080
+version = 6.5.2
+modtime = 1490711663.222575700
+
+[savedsearches/IOC%20-%20Vssadmin%20Activity]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = ll001080
+version = 6.5.2
+modtime = 1490711918.441369000
