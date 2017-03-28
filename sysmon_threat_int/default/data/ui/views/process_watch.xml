@@ -5,7 +5,7 @@
       <title>Powershell Commands</title>
       <table>
         <search>
-          <query>index=sysmon sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational"  EventDescription="Process Create" 
+          <query>`sysmon`  EventDescription="Process Create"
 Image="C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe" OR Image="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" | stats count by CommandLine | sort -count</query>
           <earliest>-24h@h</earliest>
           <latest>now</latest>
@@ -26,7 +26,7 @@ Image="C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe" OR Image=
       <title>CMD Commands</title>
       <table>
         <search>
-          <query>index=sysmon sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational"  EventDescription="Process Create" Image="C:\\Windows\\System32\\cmd.exe" | stats count by CommandLine | sort -count</query>
+          <query>`sysmon`  EventDescription="Process Create" Image="C:\\Windows\\System32\\cmd.exe" | stats count by CommandLine | sort -count</query>
           <earliest>-24h@h</earliest>
           <latest>now</latest>
           <sampleRatio>1</sampleRatio>

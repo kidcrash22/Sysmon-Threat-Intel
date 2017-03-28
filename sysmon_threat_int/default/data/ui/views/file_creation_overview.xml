@@ -5,7 +5,7 @@
       <title>Files Created Over Time</title>
       <chart>
         <search>
-          <query>index=sysmon sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational" EventCode=11 | timechart count</query>
+          <query>`sysmon` EventCode=11 | timechart count</query>
           <earliest>-24h@h</earliest>
           <latest>now</latest>
           <sampleRatio>1</sampleRatio>
@@ -41,7 +41,7 @@
       <title>Top Files Created</title>
       <chart>
         <search>
-          <query>index=sysmon sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational" EventCode=11 | top TargetFilename</query>
+          <query>`sysmon` EventCode=11 | top TargetFilename</query>
           <earliest>-24h@h</earliest>
           <latest>now</latest>
           <sampleRatio>1</sampleRatio>
@@ -77,7 +77,7 @@
       <title>Top Systems</title>
       <chart>
         <search>
-          <query>index=sysmon sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational" EventCode=11 | top Computer</query>
+          <query>`sysmon` EventCode=11 | top Computer</query>
           <earliest>-24h@h</earliest>
           <latest>now</latest>
           <sampleRatio>1</sampleRatio>
@@ -113,7 +113,7 @@
       <title>Top File Creation Processes</title>
       <table>
         <search>
-          <query>index=sysmon sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational" EventCode=11 | top Image</query>
+          <query>`sysmon` EventCode=11 | top Image</query>
           <earliest>-24h@h</earliest>
           <latest>now</latest>
           <sampleRatio>1</sampleRatio>
