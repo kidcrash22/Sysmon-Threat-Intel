@@ -2,15 +2,15 @@
 
 Collection of sysmon specific searches for Splunk all packaged in one app. Still very much a work in progress.
 
-# Requirements:
+Requirements:
 
-[Sysmon-TA](https://splunkbase.splunk.com/app/1914/)
+- [Sysmon-TA](https://splunkbase.splunk.com/app/1914/)
 
-A macro is used for all saved searches, you will need to modify it for your environment to ensure the proper Sysmon sourcetype/index is searched.
+- A macro is used for all saved searches, you will need to modify it for your environment to ensure the proper Sysmon sourcetype/index is searched.
 
-Macros: Settings --> Advanced Search --> Search Macros. Edit to your environment
+    Macros: Settings --> Advanced Search --> Search Macros. Edit to your environment
 
-Default - sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational"
+    Default - sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational"
 
 Current Dashboards:  
 -Sysmon Overview - Shows basic overview and usage for sysmon events.  
